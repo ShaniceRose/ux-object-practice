@@ -1,14 +1,20 @@
-
 /*
     Object Practice
+
     Gardening!
+
     You were hired to work as a landscaper for a large estate.
+
     See garden.jpg
+
     The owner wants you to help them organize their gardens.
+
     They have decided there will be three gardens: the rose arbor, 
     the perennial garden, and the slope planters.
+
     You want to use your newly learned programming skills to make
     this job easier.  
+
     Complete the following exercises to make your work on the garden easier.
 */
 
@@ -17,20 +23,24 @@
     Do not just highlight a section and try to run it, because the tests will
     throw an exception 
     ReferenceError: createdPopulatedEstate is not defined
+
     If you see that exception, make sure you deselect any text and then click Run Code again
+
     Remember to Save the file before you click Run Code!
 */
 
 /* ---------------------------------------------------------------------------
     Exercise One
+
     Creating a plant
+
     In order to keep track of your plants, you need to store them in your program.
     Complete the createPlant() function, which returns an object representing a plant.
     It should include all of the properties listed in the comment above the function.
 */
 /**
  * createPlant - Produces an object respresenting a plant.  It should have the following properties:
- * @param {string} type - The Type of plant.  Possible values are [ "rose", "orchid", "lily", "lavender", "poppy", "begonia", "snapdragon", "marigold"]
+ * @param {string} type - The Type of plant.  Possible values are [ "rose", "orchid", "lily", "lavender", "poppy", "begonia", "snapdragon", "marigold"] 
  * @param {boolean} isPerennial - A boolean showing if the plant is a perennial or not
  * @param {string} leafDescription - A visual description of the leaves
  * @param {string} leafColor - A string representing the leaf color
@@ -39,29 +49,21 @@
  * @param {number} gallonsWaterPerWeek - 0.0 to 3.0, representing the number of gallons of water needed per week for the plant
  * @param {number} amountOfSunNeeded - 0 to 10, representing the amount of sun needed
  */
-function createPlant(
-    type,
-    isPerennial,
-    leafDescription,
-    leafColor,
-    flowerColor,
-    flowerDescription,
-    gallonsWaterPerWeek,
-    amountOfSunNeeded
-  ) {
+function createPlant(type, isPerennial, leafDescription, leafColor, flowerColor, flowerDescription, gallonsWaterPerWeek, amountOfSunNeeded) {
     let plant = {
-      type: type,
-      isPerennial: isPerennial,
-      leafDescription: leafDescription,
-      leafColor: leafColor,
-      flowerColor: flowerColor,
-      flowerDescription: flowerDescription,
-      gallonsWaterPerWeek: gallonsWaterPerWeek,
-      amountOfSunNeeded: amountOfSunNeeded,
+        type: type,
+        isPerennial: isPerennial,
+        leafDescription: leafDescription,
+        LeafColor: leafColor,
+        flowerColor:flowerColor,
+        flowerDescription: flowerDescription,
+        gallonsWaterPerWeek: gallonsWaterPerWeek,
+        amountOfSunNeeded: amountOfSunNeeded,
     };
     
     return plant;
-  }
+}
+
 /* ------------------------------------------------
     Exercise Two
 
@@ -142,8 +144,8 @@ if(plant.type === "rose"){
  * The description should use at least a few of the properties on the plant to form a sentence.
  * 
  * Example: "A Rose which has green leaves that are rounded with a point.  The flowers are red concentric circles of pedals. "
- */ 
- function describePlant(plant) {
+ */
+function describePlant(plant) {
     let description = `A ${plant.type} which has ${plant.leafColor} leaves that are ${plant.leafDescription}.  The flowers are ${plant.flowerColor} ${plant.flowerDescription}.`;
 
     return description;
